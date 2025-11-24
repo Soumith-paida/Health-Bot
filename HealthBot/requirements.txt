@@ -2,3 +2,4 @@ streamlit
 requests
 langchain-groq
 langchain_core
+groq
