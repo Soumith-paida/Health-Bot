@@ -9,7 +9,7 @@ st.set_page_config(page_title="AI Health Assistant", page_icon="🏥", layout="w
 # --- SIDEBAR: SETUP ---
 # check if key is in secrets (cloud), Otherwise ask user (Local)
 if "GROQ_API_KEY" in st.secrets:
-    api_key = st.secrets["GROK_API_KEY"]
+    api_key = st.secrets["GROQ_API_KEY"]
 else:
     st.sidebar.header("⚙️ Settings")
     api_key = st.sidebar.text_input("Enter Groq API Key:", type="password")
@@ -165,3 +165,4 @@ with tab3:
             st.markdown(f"👉 **[Click to Find Hospitals in {user_city}]({hospital_link})**")
 
             st.markdown(f"👉 **[Click to Find Ambulance Services in {user_city}]({ambulance_link})**")
+
